@@ -17,7 +17,7 @@ pypig is an attempt to fill in these holes by providing a python module that kno
 
 = Installation =
 
-Currently there is no real install procedure. Checkout the current trunk and play with it from there. The only requirement I am aware of is that the java executable must be on your path and must be 1.6 or newer. The grunt.py file at the top level should be a reasonable example of where to start using this module, in addition to this tutorial. pigpy has been tested on OS X and Debian Linux.
+easy_install pigpy should work, or there is a source tarball available at http://code.google.com/p/pigpy
 
 == Submitting reports ==
 At its basic level, pypig is a tool to submit Pig jobs to Hadoop and push and pull data on a cluster. Assume we have a pig report called report.pig in the current directory.
