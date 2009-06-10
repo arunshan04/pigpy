@@ -1,15 +1,15 @@
 #labels Featured
-#Getting Started with pigpy
+Getting Started with pigpy
 
 = Introduction =
 
 pypig - a python tool to manage Pig reports
 
 Pig provides an amazing set of tools to create complex relational processes on top of Hadoop, but it has a few missing pieces:
-    1) Looping constructs for easily creating multiple similar reports
-    2) Caching of intermediate calculations
-    3) Data management and cleanup code
-    4) Easy testing for report correctness
+# Looping constructs for easily creating multiple similar reports
+# Caching of intermediate calculations
+# Data management and cleanup code
+# Easy testing for report correctness
 
 pypig is an attempt to fill in these holes by providing a python module that knows how to talk to a Hadoop cluster and can create and manage complex report structures.
 
