@@ -3,7 +3,7 @@ Getting Started with pigpy
 
 = Introduction =
 
-pypig - a python tool to manage Pig reports
+pigpy - a python tool to manage Pig reports
 
 Pig provides an amazing set of tools to create complex relational processes on top of Hadoop, but it has a few missing pieces:
 # Looping constructs for easily creating multiple similar reports
@@ -11,7 +11,7 @@ Pig provides an amazing set of tools to create complex relational processes on t
 # Data management and cleanup code
 # Easy testing for report correctness
 
-pypig is an attempt to fill in these holes by providing a python module that knows how to talk to a Hadoop cluster and can create and manage complex report structures.
+pigpy is an attempt to fill in these holes by providing a python module that knows how to talk to a Hadoop cluster and can create and manage complex report structures.
 
 = Getting started =
 
@@ -20,10 +20,10 @@ pypig is an attempt to fill in these holes by providing a python module that kno
 easy_install pigpy should work, or there is a source tarball available at http://code.google.com/p/pigpy
 
 == Submitting reports ==
-At its basic level, pypig is a tool to submit Pig jobs to Hadoop and push and pull data on a cluster. Assume we have a pig report called report.pig in the current directory.
+At its basic level, pigpy is a tool to submit Pig jobs to Hadoop and push and pull data on a cluster. Assume we have a pig report called report.pig in the current directory.
 
 {{{
-from bacon.hadoop import Hadoop
+from pigpy.hadoop import Hadoop
 
 classpaths = [
     os.path.join(os.path.dirname(__file__), "external", "pig-0.2.0", "pig.jar"),
@@ -41,13 +41,13 @@ This code runs the report on whatever cluster is specified by name_node, and the
 
 == Creating complex reports ==
 
-Beyond just submitting reports, pypig provides tools to create very complex reports using Python and Pig Latin rather than just Pig Latin. This allows you to use the higher level python constructs to generate pig code instead of maintaining large reports by hand.
+Beyond just submitting reports, pigpy provides tools to create very complex reports using Python and Pig Latin rather than just Pig Latin. This allows you to use the higher level python constructs to generate pig code instead of maintaining large reports by hand.
 
 Below is an example of a very simple report providing statistics on cars by color.
 
 {{{
-from bacon.hadoop import Hadoop
-from bacon.reports import Report, Plan, PlanRunner
+from pigpy.hadoop import Hadoop
+from pigpy.reports import Report, Plan, PlanRunner
 
 hadoop = (hadoop initialization code)
 
